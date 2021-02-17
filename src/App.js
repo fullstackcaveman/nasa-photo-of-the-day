@@ -7,30 +7,30 @@ import Picture from './components/PictureOfTheDay';
 console.log(API_KEY);
 
 function App() {
-	const [picture, setPicture] = useState({});
+	const [picOfTheDay, setpicOfTheDay] = useState({});
 
 	useEffect(() => {
-		const getPictures = () => {
+		const getPicOfTheDay = () => {
 			axios
 				.get(`${BASE_URL}?api_key=${API_KEY}`)
 				.then((res) => {
-					setPicture(res.data);
+					setpicOfTheDay(res.data);
 				})
 				.catch((err) => {
 					console.log(err);
 				});
 		};
-		getPictures();
+		getPicOfTheDay();
 	}, []);
 
 	return (
 		<div className='App'>
 			<Picture
-				title={picture.title}
-				image={picture.url}
-				description={picture.explanation}
-				copyright={picture.copyright}
-				date={picture.date}
+				title={picOfTheDay.title}
+				image={picOfTheDay.url}
+				description={picOfTheDay.explanation}
+				copyright={picOfTheDay.copyright}
+				date={picOfTheDay.date}
 			/>
 		</div>
 	);
