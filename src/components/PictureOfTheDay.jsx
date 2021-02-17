@@ -7,7 +7,8 @@ const Picture = ({ title, image, description, copyright, date }) => {
 			<img src={image} alt={title} />
 			<p>{description}</p>
 			<p>&copy; {copyright}</p>
-			<p>Nasa Picture of the day on {date}</p>
+			<p>Source: Nasa Picture of the day.</p>
+			<p>Date {date}</p>
 		</>
 	);
 };
