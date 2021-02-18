@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { API_KEY, BASE_URL } from './constants';
 import Picture from './components/PictureOfTheDay';
-import NavBar from './components/NavBar';
 
-function App() {
+function App({ inputvalue }) {
 	const [picOfTheDay, setPicOfTheDay] = useState({});
+
+	console.log(inputvalue);
 
 	useEffect(() => {
 		const getPicOfTheDay = () => {
@@ -23,8 +24,6 @@ function App() {
 
 	return (
 		<>
-			<NavBar />
-
 			<div className='App'>
 				<Picture
 					title={picOfTheDay.title}

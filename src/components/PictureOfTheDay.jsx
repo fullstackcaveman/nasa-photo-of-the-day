@@ -24,10 +24,10 @@ const Description = styled.div`
 `;
 
 const Footer = styled.div`
-	width: 100%;
-	background-color: #3f51b5;
+	width: 99%;
+	background-color: #000;
 	padding: 10px;
-	color: #dadada;
+	color: #fff;
 `;
 
 const Picture = ({ title, image, description, copyright, date }) => {

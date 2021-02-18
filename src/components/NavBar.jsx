@@ -82,13 +82,14 @@ const useStyles = makeStyles((theme) => ({
 export default function NavBar() {
 	const classes = useStyles();
 	const [anchorEl, setAnchorEl] = useState(null);
+	const [inputValue, setInputValue] = useState('');
 	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
 	const isMenuOpen = Boolean(anchorEl);
 	const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-	const handleProfileMenuOpen = (event) => {
-		setAnchorEl(event.currentTarget);
+	const handleProfileMenuOpen = (e) => {
+		setAnchorEl(e.currentTarget);
 	};
 
 	const handleMobileMenuClose = () => {
@@ -100,8 +101,13 @@ export default function NavBar() {
 		handleMobileMenuClose();
 	};
 
-	const handleMobileMenuOpen = (event) => {
-		setMobileMoreAnchorEl(event.currentTarget);
+	const handleMobileMenuOpen = (e) => {
+		setMobileMoreAnchorEl(e.currentTarget);
+	};
+
+	const changeInput = (e) => {
+		const { value } = e.target;
+		setInputValue(value);
 	};
 
 	const menuId = 'primary-search-account-menu';
@@ -162,7 +168,7 @@ export default function NavBar() {
 	);
 
 	return (
-		<div className={classes.grow}>
+		<div inputvalue={inputValue} className={classes.grow}>
 			<AppBar position='static'>
 				<Toolbar>
 					<IconButton
@@ -182,6 +188,8 @@ export default function NavBar() {
 						</div>
 						<InputBase
 							placeholder='Search Dates…'
+							onChange={changeInput}
+							value={inputValue}
 							classes={{
 								root: classes.inputRoot,
 								input: classes.inputInput,

@@ -35,6 +35,9 @@ export const GlobalStyle = createGlobalStyle`
 		margin-top: 20px;
 	}
   
+  .MuiPaper-root {
+    background-color: #000;
+  }
 
   
 `;
