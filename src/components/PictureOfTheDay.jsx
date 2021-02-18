@@ -8,10 +8,6 @@ const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-
-	.socialBar {
-		margin-top: 50px;
-	}
 `;
 
 const H1 = styled.h1`
@@ -27,8 +23,11 @@ const Description = styled.div`
 	width: 1024px;
 `;
 
-const Info = styled.div`
-	/*  */
+const Footer = styled.div`
+	width: 100%;
+	background-color: #3f51b5;
+	padding: 10px;
+	color: #dadada;
 `;
 
 const Picture = ({ title, image, description, copyright, date }) => {
@@ -40,11 +39,11 @@ const Picture = ({ title, image, description, copyright, date }) => {
 			<img src={image} alt={title} />
 			<SocialBar className='socialBar' />
 			<Description>{description}</Description>
-			<Info>
+			<Footer>
 				<p>&copy; {copyright}</p>
 				<p>Source: Nasa Picture of the day</p>
 				<p>Date: {date}</p>
-			</Info>
+			</Footer>
 		</Container>
 	);
 };

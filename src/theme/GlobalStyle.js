@@ -21,6 +21,9 @@ export const GlobalStyle = createGlobalStyle`
   }
   .App {
     text-align: center;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1.3;
+    color: rgb(46, 68, 78);
   }
 
   img {
