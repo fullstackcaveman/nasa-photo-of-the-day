@@ -177,7 +177,7 @@ export default function NavBar() {
 						color='inherit'
 						aria-label='open drawer'
 					>
-						<MenuIcon />
+						{/* <MenuIcon /> */}
 					</IconButton>
 					<Typography className={classes.title} variant='h6' noWrap>
 						NASA Picture of the Day
