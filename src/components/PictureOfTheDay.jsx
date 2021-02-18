@@ -7,7 +7,6 @@ const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	max-width: 1024px;
 `;
 
 const H1 = styled.h1`
@@ -20,6 +19,7 @@ const Description = styled.div`
 	margin: 10px auto 30px;
 	padding: 10px;
 	font-size: 1.2rem;
+	width: 1024px;
 `;
 
 const Info = styled.div`
@@ -29,7 +29,9 @@ const Info = styled.div`
 const Picture = ({ title, image, description, copyright, date }) => {
 	return (
 		<Container>
-			<H1>{title}</H1>
+			<H1>
+				{title} - {copyright}
+			</H1>
 			<img src={image} alt={title} />
 			<Description>{description}</Description>
 			<Info>

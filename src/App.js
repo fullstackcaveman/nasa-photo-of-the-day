@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { API_KEY, BASE_URL } from './constants';
 import Picture from './components/PictureOfTheDay';
+import NavBar from './components/NavBar';
 
 function App() {
 	const [picOfTheDay, setPicOfTheDay] = useState({});
@@ -21,15 +22,19 @@ function App() {
 	}, []);
 
 	return (
-		<div className='App'>
-			<Picture
-				title={picOfTheDay.title}
-				image={picOfTheDay.url}
-				description={picOfTheDay.explanation}
-				copyright={picOfTheDay.copyright}
-				date={picOfTheDay.date}
-			/>
-		</div>
+		<>
+			<NavBar />
+
+			<div className='App'>
+				<Picture
+					title={picOfTheDay.title}
+					image={picOfTheDay.url}
+					description={picOfTheDay.explanation}
+					copyright={picOfTheDay.copyright}
+					date={picOfTheDay.date}
+				/>
+			</div>
+		</>
 	);
 }
 
