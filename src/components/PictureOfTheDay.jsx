@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import SocialBar from './SocialBar';
 
 const Container = styled.div`
 	display: flex;
@@ -7,18 +8,22 @@ const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+
+	.socialBar {
+		margin-top: 50px;
+	}
 `;
 
 const H1 = styled.h1`
-	font-size: 2rem;
+	font-size: 3rem;
 	font-weight: bold;
-	margin: 10px auto;
+	margin: 30px auto;
 `;
 
 const Description = styled.div`
 	margin: 10px auto 30px;
 	padding: 10px;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	width: 1024px;
 `;
 
@@ -33,6 +38,7 @@ const Picture = ({ title, image, description, copyright, date }) => {
 				{title} - {copyright}
 			</H1>
 			<img src={image} alt={title} />
+			<SocialBar className='socialBar' />
 			<Description>{description}</Description>
 			<Info>
 				<p>&copy; {copyright}</p>

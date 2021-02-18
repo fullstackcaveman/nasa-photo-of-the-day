@@ -15,7 +15,8 @@ export const GlobalStyle = createGlobalStyle`
     justify-content: center;
     text-align: center;
     align-items: center;
-    line-height: 1.3;
+    line-height: 1.5;
+    font-size: 62.5%;
 
   }
   .App {
@@ -26,6 +27,10 @@ export const GlobalStyle = createGlobalStyle`
     border-radius: 5px;
     box-shadow: 1px 5px 10px black;
   }
+
+  .MuiBottomNavigation-root {
+		margin-top: 20px;
+	}
   
 
   
