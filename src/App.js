@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
 import axios from 'axios';
 import { API_KEY, BASE_URL } from './constants';
 import Picture from './components/PictureOfTheDay';
