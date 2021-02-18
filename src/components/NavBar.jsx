@@ -183,10 +183,8 @@ export default function NavBar() {
 						NASA Picture of the Day
 					</Typography>
 					<div className={classes.search}>
-						<div className={classes.searchIcon}>
-							<SearchIcon />
-						</div>
-						<InputBase
+						<div className={classes.searchIcon}>{/* <SearchIcon /> */}</div>
+						{/* <InputBase
 							placeholder='Search Dates…'
 							onChange={changeInput}
 							value={inputValue}
@@ -195,7 +193,7 @@ export default function NavBar() {
 								input: classes.inputInput,
 							}}
 							inputProps={{ 'aria-label': 'search' }}
-						/>
+						/> */}
 					</div>
 					<div className={classes.grow} />
 					<div className={classes.sectionDesktop}>
