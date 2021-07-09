@@ -4,15 +4,15 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import InputBase from '@material-ui/core/InputBase';
-import Badge from '@material-ui/core/Badge';
+// import InputBase from '@material-ui/core/InputBase';
+// import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import MailIcon from '@material-ui/icons/Mail';
-import NotificationsIcon from '@material-ui/icons/Notifications';
+// import MenuIcon from '@material-ui/icons/Menu';
+// import SearchIcon from '@material-ui/icons/Search';
+// import AccountCircle from '@material-ui/icons/AccountCircle';
+// import MailIcon from '@material-ui/icons/Mail';
+// import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles((theme) => ({
@@ -82,15 +82,15 @@ const useStyles = makeStyles((theme) => ({
 export default function NavBar() {
 	const classes = useStyles();
 	const [anchorEl, setAnchorEl] = useState(null);
-	const [inputValue, setInputValue] = useState('');
+	// const [inputValue, setInputValue] = useState('');
 	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
 	const isMenuOpen = Boolean(anchorEl);
 	const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-	const handleProfileMenuOpen = (e) => {
-		setAnchorEl(e.currentTarget);
-	};
+	// const handleProfileMenuOpen = (e) => {
+	// 	setAnchorEl(e.currentTarget);
+	// };
 
 	const handleMobileMenuClose = () => {
 		setMobileMoreAnchorEl(null);
@@ -105,10 +105,10 @@ export default function NavBar() {
 		setMobileMoreAnchorEl(e.currentTarget);
 	};
 
-	const changeInput = (e) => {
-		const { value } = e.target;
-		setInputValue(value);
-	};
+	// const changeInput = (e) => {
+	// 	const { value } = e.target;
+	// 	setInputValue(value);
+	// };
 
 	const menuId = 'primary-search-account-menu';
 	const renderMenu = (
@@ -137,23 +137,23 @@ export default function NavBar() {
 			open={isMobileMenuOpen}
 			onClose={handleMobileMenuClose}
 		>
-			<MenuItem>
+			{/* <MenuItem>
 				<IconButton aria-label='show 4 new mails' color='inherit'>
 					<Badge badgeContent={4} color='secondary'>
 						<MailIcon />
 					</Badge>
 				</IconButton>
 				<p>Messages</p>
-			</MenuItem>
-			<MenuItem>
+			</MenuItem> */}
+			{/* <MenuItem>
 				<IconButton aria-label='show 11 new notifications' color='inherit'>
 					<Badge badgeContent={11} color='secondary'>
 						<NotificationsIcon />
 					</Badge>
 				</IconButton>
 				<p>Notifications</p>
-			</MenuItem>
-			<MenuItem onClick={handleProfileMenuOpen}>
+			</MenuItem> */}
+			{/* <MenuItem onClick={handleProfileMenuOpen}>
 				<IconButton
 					aria-label='account of current user'
 					aria-controls='primary-search-account-menu'
@@ -163,12 +163,12 @@ export default function NavBar() {
 					<AccountCircle />
 				</IconButton>
 				<p>Profile</p>
-			</MenuItem>
+			</MenuItem> */}
 		</Menu>
 	);
 
 	return (
-		<div inputvalue={inputValue} className={classes.grow}>
+		<div /*inputvalue={inputValue}*/ className={classes.grow}>
 			<AppBar position='static'>
 				<Toolbar>
 					<IconButton
@@ -197,17 +197,17 @@ export default function NavBar() {
 					</div>
 					<div className={classes.grow} />
 					<div className={classes.sectionDesktop}>
-						<IconButton aria-label='show 4 new mails' color='inherit'>
+						{/* <IconButton aria-label='show 4 new mails' color='inherit'>
 							<Badge badgeContent={4} color='secondary'>
 								<MailIcon />
 							</Badge>
-						</IconButton>
-						<IconButton aria-label='show 17 new notifications' color='inherit'>
+						</IconButton> */}
+						{/* <IconButton aria-label='show 17 new notifications' color='inherit'>
 							<Badge badgeContent={17} color='secondary'>
 								<NotificationsIcon />
 							</Badge>
-						</IconButton>
-						<IconButton
+						</IconButton> */}
+						{/* <IconButton
 							edge='end'
 							aria-label='account of current user'
 							aria-controls={menuId}
@@ -216,7 +216,7 @@ export default function NavBar() {
 							color='inherit'
 						>
 							<AccountCircle />
-						</IconButton>
+						</IconButton> */}
 					</div>
 					<div className={classes.sectionMobile}>
 						<IconButton
